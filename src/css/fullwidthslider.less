@@ -1,0 +1,64 @@
+
+/* jssor slider arrow navigator skin 22 css */
+/*
+.jssora22l                  (normal)
+.jssora22r                  (normal)
+.jssora22l:hover            (normal mouseover)
+.jssora22r:hover            (normal mouseover)
+.jssora22l.jssora22ldn      (mousedown)
+.jssora22r.jssora22rdn      (mousedown)
+.jssora22l.jssora22lds      (disabled)
+.jssora22r.jssora22rds      (disabled)
+*/
+@galleryWidth: 1920px;
+@galleryHeight: 1045px;
+
+.jssor_wrapper {
+    position: relative; 
+    margin: 0 auto; 
+    top: 0px; 
+    left: 0px;
+    width: @galleryWidth; 
+    height: @galleryHeight; 
+    overflow: hidden; 
+    visibility: hidden;
+}
+.jssor_container {
+    cursor: default; 
+    position: relative; 
+    top: 0px; 
+    left: 0px; 
+    width: @galleryWidth; 
+    height: @galleryHeight; 
+    overflow: hidden;
+}
+
+.jssora22base {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 60px;
+    height: 177px;
+    cursor: pointer;
+    background: url('img/slider-arrows.png') center center no-repeat;
+    overflow: hidden;
+    top: 0px;
+}
+.jssora22l {
+    .jssora22base;
+    left: 50px;
+    background-position: 0 0;
+    &.jssora22lds {
+        opacity: .3; 
+        pointer-events: none;
+    }
+}
+.jssora22r {
+    .jssora22base;
+    right: 50px;
+    background-position: -60px 0;
+    &.jssora22rds {
+        opacity: .3; 
+        pointer-events: none;
+    }
+}

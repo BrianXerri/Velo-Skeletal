@@ -1,34 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="keywords" content="[%url_info name:'meta_keywords'/%]"/>
-<meta name="description" content="[%url_info name:'meta_description'/%]"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
-<meta property="og:image" content="[%if [@config:current_page_type@] eq 'product'%][@config:homeurl@][%asset_url type:'product' id:'[@SKU@]' thumb:'full'/%][%ELSEIF [@config:current_page_type@] eq 'content'%][@config:homeurl@][%ASSET_url type:'content' id:'[@content_id@]' default:'/assets/website_logo.png'%][%/ASSET_url%][%ELSE%][@config:homeurl@]/assets/website_logo.png[%/if%]"/>
-<meta property="og:title" content="[%url_info name:'page_title'/%]"/>
-<meta property="og:site_name" content="[@config:website_name@]"/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="[@config:canonical_url@]"/>
-<meta property="og:description" content="[%url_info name:'meta_description'/%]"/>
-[@config:GOOGLE_VERIFICATION_CODE@]
-<title>[%url_info name:'page_title'/%]</title>
-<link rel="canonical" href="[@config:canonical_url@]"/>
-<link rel="shortcut icon" href="/assets/favicon_logo.png"/>
-<link class="theme-selector" rel="stylesheet" type="text/css" href="[%ntheme_asset%]css/app.css[%/ntheme_asset%]" media="all"/>
-<link rel="stylesheet" type="text/css" href="[%ntheme_asset%]css/style.css[%/ntheme_asset%]" media="all"/>
-[%cdn_asset html:'1' type:'css' domain:'maxcdn.bootstrapcdn.com' library:'font-awesome' version:'4.4.0'%]css/font-awesome.min.css[%/cdn_asset%]
-[%cdn_asset html:'1' type:'css' library:'jquery_ui' version:'1.11.1'%]css/custom-theme/jquery-ui-1.8.18.custom.css[%/cdn_asset%]
-[%cdn_asset html:'1' type:'css' library:'fancybox' version:'2.1.5'%]jquery.fancybox.css[%/cdn_asset%]
-<!--[if lte IE 8]>
-	[%cdn_asset html:'1' type:'js' library:'html5shiv' version:'3.7.0'%]html5shiv.js[%/cdn_asset%]
-	[%cdn_asset html:'1' type:'js' library:'respond.js' version:'1.3.0'%]respond.min.js[%/cdn_asset%]
-<![endif]-->
-[%tracking_code type:'Declaration'/%]
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="keywords" content="[%url_info name:'meta_keywords'/%]"/>
+	<meta name="description" content="[%url_info name:'meta_description'/%]"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
+	<meta property="og:image" content="[%if [@config:current_page_type@] eq 'product'%][@config:homeurl@][%asset_url type:'product' id:'[@SKU@]' thumb:'full'/%][%ELSEIF [@config:current_page_type@] eq 'content'%][@config:homeurl@][%ASSET_url type:'content' id:'[@content_id@]' default:'/assets/website_logo.png'%][%/ASSET_url%][%ELSE%][@config:homeurl@]/assets/website_logo.png[%/if%]"/>
+	<meta property="og:title" content="[%url_info name:'page_title'/%]"/>
+	<meta property="og:site_name" content="[@config:website_name@]"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="[@config:canonical_url@]"/>
+	<meta property="og:description" content="[%url_info name:'meta_description'/%]"/>
+	[@config:GOOGLE_VERIFICATION_CODE@]
+	<title>[%url_info name:'page_title'/%]</title>
+	<link rel="canonical" href="[@config:canonical_url@]"/>
+	<!--link rel="shortcut icon" href="/assets/favicon_logo.png"/-->
+
+	<!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="[%ntheme_asset%]css/img/favicon/apple-icon-57x57.png[%/ntheme_asset%]">
+    <link rel="apple-touch-icon" sizes="60x60" href="[%ntheme_asset%]css/img/favicon/apple-icon-60x60.png[%/ntheme_asset%]">
+    <link rel="apple-touch-icon" sizes="72x72" href="[%ntheme_asset%]css/img/favicon/apple-icon-72x72.png[%/ntheme_asset%]">
+    <link rel="apple-touch-icon" sizes="76x76" href="[%ntheme_asset%]css/img/favicon/apple-icon-76x76.png[%/ntheme_asset%]">
+    <link rel="apple-touch-icon" sizes="114x114" href="[%ntheme_asset%]css/img/favicon/apple-icon-114x114.png[%/ntheme_asset%]">
+    <link rel="apple-touch-icon" sizes="120x120" href="[%ntheme_asset%]css/img/favicon/apple-icon-120x120.png[%/ntheme_asset%]">
+    <link rel="apple-touch-icon" sizes="144x144" href="[%ntheme_asset%]css/img/favicon/apple-icon-144x144.png[%/ntheme_asset%]">
+    <link rel="apple-touch-icon" sizes="152x152" href="[%ntheme_asset%]css/img/favicon/apple-icon-152x152.png[%/ntheme_asset%]">
+    <link rel="apple-touch-icon" sizes="180x180" href="[%ntheme_asset%]css/img/favicon/apple-icon-180x180.png[%/ntheme_asset%]">
+    <link rel="icon" type="image/png" sizes="192x192"  href="[%ntheme_asset%]css/img/favicon/android-icon-192x192.png[%/ntheme_asset%]">
+    <link rel="icon" type="image/png" sizes="32x32" href="[%ntheme_asset%]css/img/favicon/favicon-32x32.png[%/ntheme_asset%]">
+    <link rel="icon" type="image/png" sizes="96x96" href="[%ntheme_asset%]css/img/favicon/favicon-96x96.png[%/ntheme_asset%]">
+    <link rel="icon" type="image/png" sizes="16x16" href="[%ntheme_asset%]css/img/favicon/favicon-16x16.png[%/ntheme_asset%]">
+    <link rel="manifest" href="[%ntheme_asset%]css/img/favicon/manifest.json[%/ntheme_asset%]">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta name="msapplication-TileImage" content="[%ntheme_asset%]css/img/favicon/ms-icon-144x144.png[%/ntheme_asset%]">
+    <meta name="theme-color" content="#000">
+
+
+	<link class="theme-selector" rel="stylesheet" type="text/css" href="[%ntheme_asset%]css/app.css[%/ntheme_asset%]" media="all"/>
+	<link rel="stylesheet" type="text/css" href="[%ntheme_asset%]css/style.css[%/ntheme_asset%]" media="all"/>
+	<link rel="stylesheet" type="text/css" href="[%ntheme_asset%]css/font-awesome/css/font-awesome.min.css[%/ntheme_asset%]" media="all"/>
+	[%cdn_asset html:'1' type:'css' domain:'maxcdn.bootstrapcdn.com' library:'font-awesome' version:'4.4.0'%]css/font-awesome.min.css[%/cdn_asset%]
+	[%cdn_asset html:'1' type:'css' library:'jquery_ui' version:'1.11.1'%]css/custom-theme/jquery-ui-1.8.18.custom.css[%/cdn_asset%]
+	[%cdn_asset html:'1' type:'css' library:'fancybox' version:'2.1.5'%]jquery.fancybox.css[%/cdn_asset%]
+	<!--[if lte IE 8]>
+		[%cdn_asset html:'1' type:'js' library:'html5shiv' version:'3.7.0'%]html5shiv.js[%/cdn_asset%]
+		[%cdn_asset html:'1' type:'js' library:'respond.js' version:'1.3.0'%]respond.min.js[%/cdn_asset%]
+	<![endif]-->
+	[%tracking_code type:'Declaration'/%]
 </head>
 
-<body id="n_[@config:current_page_type@]" class="n_[@CONFIG:TEMPLATELANG@]">
-<div class="container wrapper-header">
+<body id="n_[@config:current_page_type@]" class="n_[@CONFIG:TEMPLATELANG@]" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="100">
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+				<a class="navbar-brand page-scroll" href="#page-top">
+                    VELO:
+					<dl>
+						<dt><i>verb</i> &lt; Latin</dt>
+						<dd>-hide, conceal</dd>
+						<dd>-veil, cover, cover up</dd>
+					</dl>
+                </a>
+            </div>
+			
+            <ul class="menu-nav">
+                <li>
+                    <button class="hamburger hamburger--collapse collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <a href="[%url page:'checkout' type:'cart'/%]" class="ico-cart">Shopping Cart</a>
+                </li>
+            </ul>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#enhance">Enhance</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#install">Install</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#gallery">Gallery</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#fit">Fit</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#purchase">Purchase</a>
+                    </li>                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!--div class="container wrapper-header">
 	<div class="row row-padded">
 		<div class="col-xs-12 col-sm-4 wrapper-logo">
 			<a href="[@config:homeurl@]" title="[@config:company_name@]">
@@ -145,4 +217,4 @@
 	</div>
 </div>
 <div id="main-content" class="container" role="main">
-	<div class="row">
+	<div class="row"-->

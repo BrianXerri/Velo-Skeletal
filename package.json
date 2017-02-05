@@ -1,5 +1,5 @@
 {
-  "name": "Skeletal",
+  "name": "velo",
   "version": "2.3.1",
   "description": "Skeletal is the development theme for Neto. It is the base framework that contains all of our front-end features. Skeletal is built on Bootstrap 3 and needs to be installed on a Neto 5 system to work at all.",
   "main": "gulpfile.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NetoECommerce/Skeletal.git"
+    "url": "git+https://github.com/NetoECommerce/Skeletal.git"
   },
   "author": "",
   "license": "ISC",
@@ -17,8 +17,16 @@
   },
   "homepage": "https://github.com/NetoECommerce/Skeletal",
   "devDependencies": {
-    "gulp": "3.9.0",
-    "gulp-less": "3.0.3"
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.13.0",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-header": "^1.8.7",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "jquery": "^1.11.3"
   },
   "dependencies": {
     "bootstrap": "3.3.6"
