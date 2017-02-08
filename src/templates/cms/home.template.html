@@ -23,7 +23,7 @@
     <section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <p>A beautifully designed, modular blind bracket cover aimed at improving the aesthetic of conventional roller blinds.</p>
+                <p>[@page_content@]</p>
             </div>
         </div>
     </section>
@@ -35,13 +35,13 @@
 				<div class="col-lg-12">
 					<div class="col-lg-6">
 						<div class="comparison">
-                            <img src="img/before.jpg" />
+                            <img src="[%ntheme_asset%]css/img/before.jpg[%/ntheme_asset%]" />
 							<span>Before</span>
 						</div>
 					</div>
 					<div class="col-lg-6">
 						<div class="comparison">
-                            <img src="img/after.jpg" />
+                            <img src="[%ntheme_asset%]css/img/after.jpg[%/ntheme_asset%]" />
 							<span>After</span>                            
 						</div>
 					</div>
@@ -65,7 +65,7 @@
 				<div class="col-lg-12 install-instructions">
 					<div class="col-lg-4">
                         <div class="steps">
-                            <img src="img/install-step1.png" />
+                            <img src="[%ntheme_asset%]css/img/install-step1.png[%/ntheme_asset%]" />
                         </div>
                         <h3>Step 1</h3>
                         <p>Check which side your roller 
@@ -77,7 +77,7 @@
 					</div>
 					<div class="col-lg-4">
                         <div class="steps">
-                            <img src="img/install-step2.png" />
+                            <img src="[%ntheme_asset%]css/img/install-step2.png[%/ntheme_asset%]" />
                         </div>
                         <h3>Step 2</h3>
                         <p>Carefully slide your
@@ -88,7 +88,7 @@
                     </div>
 					<div class="col-lg-4">                        
                         <div class="steps">
-                            <img src="img/install-step3.png" />
+                            <img src="[%ntheme_asset%]css/img/install-step3.png[%/ntheme_asset%]" />
                         </div>
                         <h3>Enjoy!</h3>
                     </div>
@@ -102,19 +102,19 @@
 		<div id="jssor_1" class="jssor_wrapper">
             <div data-u="slides" class="jssor_container">
                 <div data-p="225.00">
-                    <img data-u="image" src="img/gallery-1.jpg" />
+                    <img data-u="image" src="[%ntheme_asset%]css/img/gallery-1.jpg[%/ntheme_asset%]" />
                 </div>
                 <div data-p="225.00" style="display: none;">
-                    <img data-u="image" src="img/gallery-2.jpg" />
+                    <img data-u="image" src="[%ntheme_asset%]css/img/gallery-2.jpg[%/ntheme_asset%]" />
                 </div>
                 <div data-p="225.00" style="display: none;">
-                    <img data-u="image" src="img/gallery-3.jpg" />
+                    <img data-u="image" src="[%ntheme_asset%]css/img/gallery-3.jpg[%/ntheme_asset%]" />
                 </div>
                 <div data-p="225.00" style="display: none;">
-                    <img data-u="image" src="img/gallery-4.jpg" />
+                    <img data-u="image" src="[%ntheme_asset%]css/img/gallery-4.jpg[%/ntheme_asset%]" />
                 </div>
                 <div data-p="225.00" data-po="80% 55%" style="display: none;">
-                    <img data-u="image" src="img/gallery-5.jpg" />
+                    <img data-u="image" src="[%ntheme_asset%]css/img/gallery-5.jpg[%/ntheme_asset%]" />
                 </div>
             </div>
             <!-- Arrow Navigator -->
@@ -125,7 +125,7 @@
 	
 	<section id="fit" class="content-section text-center no-spacing">
 		<h2 class="no-spacing">VELO will fit most major brands of roller blinds</h2>
-		<img src="img/fit.jpg" class="full-width" />
+		<img src="[%ntheme_asset%]css/img/fit.jpg[%/ntheme_asset%]" class="full-width" />
 	</section>
 	
 	<section id="purchase" class="content-section text-center no-spacing">
@@ -134,60 +134,28 @@
 			<div class="row">
 				<div class="col-lg-12 buy-links">
 					<div class="col-lg-6">
-						<span href="#">
+						<a href="#">
                             <div class="comparison">
-                                <img src="img/product-silver.jpg" />
+                                <img src="[%ntheme_asset%]css/img/product-silver.jpg[%/ntheme_asset%]" />
                             </div>
                             <h3>One set of VELO<br>
                                 (Silver)<br>
                                 AUD $14.95
                             </h3>
-                            <div class="coming-soon">
-                                <span>Out of Stock</span>   
-                            </div>
-                        </span>
+                        </a>
 					</div>
 					<div class="col-lg-6">
-                        <span>
+                        <a href="#">
                             <div class="comparison">
-                                <img src="img/product-white.jpg" />                       
+                                <img src="[%ntheme_asset%]css/img/product-white.jpg[%/ntheme_asset%]" />                       
                             </div>
                             <h3>One set of VELO<br>
                                 (White)<br>
                                 AUD $12.95
                             </h3>
-                            <div class="coming-soon">
-                                <span>Out of Stock</span>   
-                            </div>
-                        </span>
+                        </a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
-
-	<hr>
-	<div id="homepage-content" class="n-responsive-content">[@page_content@]</div>
-	[%if [@config:show_home_ads@]%]
-		[%advert type:'product' limit:'8' template:'' ad_group:''%]
-			[%param *header%]
-				<hr />
-				<div class="row">
-			[%/param%]
-			[%param footer%]
-				</div>
-			[%/param%]
-			[%param *ifempty%]
-				[%random_products category:'0' template:'' limit:'8'%]
-					[%param *header%]
-						<hr />
-						<div class="row">
-					[%/param%]
-					[%param *footer%]
-						</div>
-					[%/param%]
-				[%/random_products%]
-			[%/param%]
-		[%/advert%]
-	[%/if%]

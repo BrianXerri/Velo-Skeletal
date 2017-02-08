@@ -115,6 +115,9 @@
   transform: rotate(90deg);
   transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+.hamburger-nav {
+  display: none;
+}
 /* jssor slider arrow navigator skin 22 css */
 /*
 .jssora22l                  (normal)
@@ -210,10 +213,7 @@ html {
 }
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   margin: 0 0 35px;
   text-transform: uppercase;
   font-weight: 100;
@@ -223,23 +223,8 @@ h6 {
 @media (min-width: 768px) {
   h1,
   h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h3 {
     font-size: 30px;
-  }
-}
-p {
-  margin: 0 0 25px;
-  font-size: 16px;
-  line-height: 1.5;
-}
-@media (min-width: 768px) {
-  p {
-    margin: 0 0 35px;
-    font-size: 27px;
-    line-height: 1.6;
   }
 }
 a {
@@ -268,8 +253,14 @@ a:focus {
 .full-width {
   width: 100%;
 }
+.navbar-fixed-top {
+  position: static;
+}
+.container.internal-wrapper {
+  margin: 20px auto;
+}
 .navbar-custom {
-  margin-bottom: 0;
+  margin: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   background-color: black;
@@ -360,6 +351,7 @@ a:focus {
   float: right;
   margin: 15px 0;
   padding: 0;
+  list-style: none;
 }
 .navbar-custom .menu-nav li {
   float: left;
@@ -386,7 +378,6 @@ a:focus {
     padding: 20px 0;
     border-bottom: none;
     letter-spacing: 1px;
-    background: #000;
     -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
@@ -431,7 +422,7 @@ a:focus {
   bottom: 6px;
   border-bottom: 1px solid #929292;
 }
-.brand-text {
+p.brand-text {
   font-size: 18px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -654,6 +645,7 @@ a:focus {
 footer {
   padding: 50px 0 0;
   background-color: #4f4f4f;
+  clear: both;
   color: #FFF;
 }
 footer p {
@@ -743,6 +735,30 @@ footer .social-links ul li.social-facebook {
 footer .social-links ul li:hover {
   opacity: 1;
 }
+#n_home .hamburger-nav {
+  display: block;
+}
+#n_home .navbar-custom {
+  background-color: transparent;
+}
+#n_home .navbar-custom.top-nav-collapse {
+  background-color: #000;
+}
+#n_home .navbar-fixed-top {
+  position: fixed;
+}
+#n_home p {
+  margin: 0 0 25px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  #n_home p {
+    margin: 0 0 35px;
+    font-size: 27px;
+    line-height: 1.6;
+  }
+}
 @media (max-width: 768px) {
   .hamburger {
     padding-left: 15px;
@@ -771,4 +787,7 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+.nactivity {
+  display: none;
 }

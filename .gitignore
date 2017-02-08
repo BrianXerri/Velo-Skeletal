@@ -1,3 +1,6 @@
 node_modules/
 dist/
+.vscode/
+.buildkite/
 .DS_Store
+debug.log
