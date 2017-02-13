@@ -68,7 +68,23 @@ a {
     position: static;
 }
 
-.container.internal-wrapper { margin: 20px auto; }
+.container.internal-wrapper { 
+    margin: 20px auto; 
+    min-height: 570px;
+}
+
+.buy-button {
+    display: block;
+    border: 1px solid #FFF;
+    background-color: #008ecc;
+    color: #FFF;
+    padding: 0 15px;
+    text-transform: none;
+    font-size: 30px;
+    line-height: 48px;
+    margin: 5px 0 0;
+    border-radius: 6px;
+}
 
 .navbar-custom {
     margin: 0;
@@ -90,6 +106,10 @@ a {
         padding: 15px 0 15px 15px;
         &:focus {
             outline: none;
+        }
+        @media(max-width:440px) {
+            padding-top: 37px;
+            dl { display: none; }
         }
 		dl {
 			text-transform: none;
@@ -163,7 +183,9 @@ a {
         li {
             float: left;
             padding: 0 15px 0 0;
-            border-right: 1px solid #FFF; 
+            @media(max-width:440px) {
+                padding-right: 5px
+            }
         }
         li:last-child {
             border: none;
@@ -230,7 +252,8 @@ a {
     }
 }
 .brand-text {
-    font-size: 18px !important;
+    display: block;
+    font-size: 18px;
     text-transform: uppercase;
     white-space: nowrap;
     letter-spacing: 1px;
@@ -400,6 +423,19 @@ a {
         padding: 80px 25px 30px 0;
         img {
             width: 100%;
+        }        
+    }
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     }
 }
@@ -489,6 +525,7 @@ footer {
     .social-links {
         background-color: #000;
         overflow:hidden;
+        a { display: block; }
         * { box-sizing: border-box; }
         ul {
             text-align: center;
@@ -525,9 +562,11 @@ footer {
     }
 }
 
-
 #n_home {
-    .hamburger-nav { display: block; }
+    .hamburger-nav { 
+        display: block;
+        border-right: 1px solid #FFF; 
+    }
     .navbar-custom { 
         background-color: transparent; 
         &.top-nav-collapse { background-color: #000; }
