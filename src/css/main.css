@@ -129,7 +129,9 @@
 .jssora22l.jssora22lds      (disabled)
 .jssora22r.jssora22rds      (disabled)
 */
+.jssor_wrapper_mobile,
 .jssor_wrapper {
+  display: none;
   position: relative;
   margin: 0 auto;
   top: 0px;
@@ -138,6 +140,22 @@
   height: 1045px;
   overflow: hidden;
   visibility: hidden;
+}
+@media (min-width: 768px) {
+  .jssor_wrapper {
+    display: block;
+  }
+}
+.jssor_wrapper_mobile {
+  height: 2089px;
+}
+.jssor_wrapper_mobile .jssor_container {
+  height: 2089px;
+}
+@media (max-width: 768px) {
+  .jssor_wrapper_mobile {
+    display: block;
+  }
 }
 .jssor_container {
   cursor: default;
@@ -781,6 +799,11 @@ footer .social-links ul li:hover {
 #n_home .hamburger-nav {
   display: block;
   border-right: 1px solid #FFF;
+}
+@media (max-width: 345px) {
+  #n_home .hamburger-nav {
+    display: none;
+  }
 }
 #n_home .navbar-custom {
   background-color: transparent;

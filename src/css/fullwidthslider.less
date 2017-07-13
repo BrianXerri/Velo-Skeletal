@@ -12,8 +12,12 @@
 */
 @galleryWidth: 1920px;
 @galleryHeight: 1045px;
+@mobileGalleryHeight: 2089px;
 
+
+.jssor_wrapper_mobile,
 .jssor_wrapper {
+    display: none;
     position: relative; 
     margin: 0 auto; 
     top: 0px; 
@@ -22,6 +26,14 @@
     height: @galleryHeight; 
     overflow: hidden; 
     visibility: hidden;
+}
+.jssor_wrapper {    
+    @media (min-width: 768px) { display: block; }
+}
+.jssor_wrapper_mobile {    
+    height: @mobileGalleryHeight; 
+    .jssor_container { height: @mobileGalleryHeight; } 
+    @media (max-width: 768px) {  display: block; }
 }
 .jssor_container {
     cursor: default; 
