@@ -224,6 +224,7 @@ body {
   height: 100%;
   color: #000;
   background-color: white;
+  overflow-x: hidden;
 }
 html {
   width: 100%;
